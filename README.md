@@ -1,3 +1,6 @@
+# Note
+This is an archive of amits service list builder. I do not own any of the code in this repo
+
 # service-list-builder
 
 I am not responsible for damage caused to computer. This tool is powerful and for advanced users only. There is a risk of damaging your operating system if you disable core services that are required for Windows to function correctly. It is your responsibility to use suitable service configurations for your specific operating system. It is also recommended that you use this tool before installing any programs as any other services not defined in the lists will be disabled (e.g. services installed by anticheats, or you could simply enable them after building the scripts, but the first method is recommended). If you would like to rebuild the scripts, ensure to run the generated Services-Enable.bat script beforehand as the tool relies on the current state of services for building future scripts.
