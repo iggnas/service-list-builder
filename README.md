@@ -8,16 +8,16 @@ I am not responsible for damage caused to computer. This tool is powerful and fo
 
 -    Open lists.ini in a text editor
 
-    -       Note: All entries are case-sensitive
+   - Note: All entries are case-sensitive
 
-    -      Every user mode service NOT specified in the [enabled_services] section will get disabled. These two sections act as whitelist of user mode services NOT to disable
+   - Every user mode service NOT specified in the [enabled_services] section will get disabled. These two sections act as whitelist of user mode services NOT to disable
 
-    -      Individual services to disable can be explicitly specified in the [individual_disabled_services] section. This section does not follow the disable all except logic. Only the services specified in this section will get disabled. This is useful in situations where the user only needs to disable a few user mode services instead of using the batch approach with          [enabled_services] or would like to disable kernel mode services at all
+   - Individual services to disable can be explicitly specified in the [individual_disabled_services] section. This section does not follow the disable all except logic. Only the services specified in this section will get disabled. This is useful in situations where the user only needs to disable a few user mode services instead of using the batch approach with          [enabled_services] or would like to disable kernel mode services at all
 
-    -    Paths to folders or binaries can be specified in the [rename_binaries] section. The logic behind this is that when a binary gets renamed to anything other than its original file name, it will not run. Avoid folders and binaries with # in the name due to conflict with inline comments
+   - Paths to folders or binaries can be specified in the [rename_binaries] section. The logic behind this is that when a binary gets renamed to anything other than its original file name, it will not run. Avoid folders and binaries with # in the name due to conflict with inline comments
 
-    -    Pass lists.ini as an argument to the program through the command-line with the command below to build the scripts
+   - Pass lists.ini as an argument to the program through the command-line with the command below to build the scripts
 ```
     service-list-builder "lists.ini"
 ```
-    -    The scripts will be built in the build folder. NSudo is required to run the scripts with Enable All Privileges checkbox enabled to prevent errors when writing to registry and renaming files
+   - The scripts will be built in the build folder. NSudo is required to run the scripts with Enable All Privileges checkbox enabled to prevent errors when writing to registry and renaming files
