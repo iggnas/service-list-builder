@@ -1,5 +1,5 @@
 # Note
-This is an archive of amits service list builder. I do not own any of the code in this repo
+This is an archive of amits service list builder. I do not own anything in this repo
 
 # service-list-builder
 
