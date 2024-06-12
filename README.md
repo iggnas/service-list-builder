@@ -1,42 +1,23 @@
-# NOTE
-This is not my project, readme is copied from an old archive
+# service-list-builder
 
-# Service-List-Builder
+I am not responsible for damage caused to computer. This tool is powerful and for advanced users only. There is a risk of damaging your operating system if you disable core services that are required for Windows to function correctly. It is your responsibility to use suitable service configurations for your specific operating system. It is also recommended that you use this tool before installing any programs as any other services not defined in the lists will be disabled (e.g. services installed by anticheats, or you could simply enable them after building the scripts, but the first method is recommended). If you would like to rebuild the scripts, ensure to run the generated Services-Enable.bat script beforehand as the tool relies on the current state of services for building future scripts.
 
-CLI tool to build scripts to toggle between minimal & default services in Windows based on user defined lists.
+# Usage and Program Logic
 
-# Disclaimer
+-    Download the latest release from the releases tab
 
-I am not responsible for damage caused to computer. This tool is powerful & for advanced users only. There is a risk of damaging your operating system if you disable core services that are required for windows to function correctly. It is your responsibility to use suitable service configurations for your specific operating system. It is also recommended that you use this tool before installing any programs as any other services not defined in the lists will be disabled (e.g services installed by anticheats, or you could simply enable them after building the scripts but the first method is recommended).
+-    Open lists.ini in a text editor
 
-# Usage
+    -       Note: All entries are case-sensitive
 
--    Download the latest release from the releases tab.
+    -      Every user mode service NOT specified in the [enabled_services] section will get disabled. These two sections act as whitelist of user mode services NOT to disable
 
--   Open lists.ini in a text editor.
+    -      Individual services to disable can be explicitly specified in the [individual_disabled_services] section. This section does not follow the disable all except logic. Only the services specified in this section will get disabled. This is useful in situations where the user only needs to disable a few user mode services instead of using the batch approach with          [enabled_services] or would like to disable kernel mode services at all
 
--    You can import your service list seperated by new lines under the [Automatic_Services] and [Manual_Services] sections. Whatever services you do not specify under these fields will get disabled.
+    -    Paths to folders or binaries can be specified in the [rename_binaries] section. The logic behind this is that when a binary gets renamed to anything other than its original file name, it will not run. Avoid folders and binaries with # in the name due to conflict with inline comments
 
--    Additionally you can also import a list of drivers to be disabled seperated by new lines under the [Drivers_To_Disable] section.
-
--    Additionally you can include full folder paths or binaries (without quotes) to get renamed to _old under the [Toggle_Files_Folders].
-
-
+    -    Pass lists.ini as an argument to the program through the command-line with the command below to build the scripts
 ```
-    Note: 
-
-    - All lists are case sensitive
-
-    - This tool automatically handles driver filters for  the following:
-
-      - EhStorClass
-      - fvevol
-      - iorate
-      - rdyboost
-      - ksthunk
-      - volsnap
+    service-list-builder "lists.ini"
 ```
-
--    Pass lists.ini as an argument to service-list-builder.exe to build the scripts through the command-line or by dragging and dropping the ini onto the binary.
-
--    The scripts will be built in the build folder. NSudo is required to run the scripts with with "Enable All Privilages" checkbox enabled to prevent errors when writing to registry & renaming files.
+    -    The scripts will be built in the build folder. NSudo is required to run the scripts with Enable All Privileges checkbox enabled to prevent errors when writing to registry and renaming files
