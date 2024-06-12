@@ -21,6 +21,6 @@ I am not responsible for damage caused to computer. This tool is powerful and fo
 
    - Pass lists.ini as an argument to the program through the command-line with the command below to build the scripts
 ```
-    service-list-builder "lists.ini"
+    service-list-builder.exe --config lists.ini
 ```
    - The scripts will be built in the build folder. NSudo is required to run the scripts with Enable All Privileges checkbox enabled to prevent errors when writing to registry and renaming files
