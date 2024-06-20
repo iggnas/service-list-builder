@@ -7,7 +7,7 @@ I am not responsible for damage caused to computer. This tool is powerful and fo
 
 # Usage and Program Logic
 
--    Download files from bin folder
+-    Download files from releases
 
 -    Open lists.ini in a text editor
 
