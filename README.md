@@ -27,4 +27,4 @@ I am not responsible for damage caused to computer. This tool is powerful and fo
 
 # Minimal services preset
 
-There is a minimal-services.ini file in bin folder which is a general present with helpful comments to customize it that can be used instead of manually editing the lists.ini
+There is a minimal-services.ini file in bin folder which is a general present with helpful comments to customize it that can be used instead of manually editing lists.ini
