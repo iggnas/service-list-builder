@@ -24,3 +24,7 @@ I am not responsible for damage caused to computer. This tool is powerful and fo
     service-list-builder.exe --config lists.ini
 ```
    - The scripts will be built in the build folder. NSudo is required to run the scripts with Enable All Privileges checkbox enabled to prevent errors when writing to registry and renaming files
+
+# Minimal services preset
+
+There is a minimal-services.ini file in bin folder which is a general present with helpful comments to customize it that can be used instead of manually editing the lists.ini
